@@ -28,7 +28,7 @@ hide_streamlit_style = """
         font-weight: bold;
         color: white;
         white-space: nowrap;   /* impede quebra de linha */
-        padding: 0 3rem;       /* adiciona espaço lateral */
+        padding-left: 3rem;       /* adiciona espaço lateral */
         display: inline-block; /* garante aplicação do padding */
     }
     /* Title principal */
