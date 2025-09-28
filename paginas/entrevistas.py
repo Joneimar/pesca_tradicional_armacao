@@ -32,7 +32,6 @@ def entrevistas_page():
 
     with st.container(border=True):
         st.header("A Pesca e o Turismo à Ilha do Campeche (A Integração com o Território)", anchor=False)
-        st.audio(data="data/entrevistas/Joca P12.mp3", format="audio/mp3")
         st.audio(data="data/entrevistas/Joca P14.mp3", format="audio/mp3")
         st.audio(data="data/entrevistas/Rodrigo-P15.mp3", format="audio/mp3")
         st.caption("Entrevista com Pescadores APPAS (Associação de Pescadores Artesanais da Armação do Pântano do Sul) (2025).")
