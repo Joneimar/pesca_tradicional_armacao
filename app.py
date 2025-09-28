@@ -23,7 +23,7 @@ hide_streamlit_style = """
 
     /* Conteúdo do header */
     header:before {
-        content: "Pesca Artesanal na Armação do Pântano do Sul";
+        content: "Repositório Multimídia";
         font-size: 18px;
         font-weight: bold;
         color: white;
@@ -76,4 +76,4 @@ with pages[3]:
     from paginas.galeria import *
     galeria_page()
 
-    
+

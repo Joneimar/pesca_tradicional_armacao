@@ -7,7 +7,6 @@ def conteudos_didaticos_page():
     with st.container(border=True):   
         st.header("Vídeo didático: Mapeando a Mente do Mar", anchor=False)
         st.video("data/videos/Mapeando_a_Mente_do_Mar.mp4")
-        # st.video("https://youtu.be/8l9O-S9DWUI")
         st.caption("Criado com Inteligência Artificial de escopo controlado (Notebook LM) a partir da dissertação de mestrado abaixo.")
         st.markdown(f"[O MUNDO É O MAR: PESCADORES TRADICIONAIS E SEUS MAPAS MENTAIS]({'https://drive.google.com/file/d/1Hk9I9GA7uTf-ETG-vBLZP2jB85t-aVLE/view?usp=sharing'})", unsafe_allow_html=True)
 
