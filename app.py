@@ -10,7 +10,18 @@ st.set_page_config(
 hide_streamlit_style = """
     <style>
     #MainMenu {visibility: hidden;}  /* Esconde menu dos três pontinhos */
-    footer {visibility: hidden;}     /* Esconde rodapé */
+    
+    /* Estilo do rodapé customizado */
+    .footer {
+        background-color: #2c3e50 !important;
+        color: white !important;
+        padding: 1rem !important;
+        text-align: center !important;
+        font-size: 0.9rem !important;
+        border-top: 2px solid #eaab61 !important;
+        margin-top: 2rem !important;
+        border-radius: 5px 5px 0 0 !important;
+    }
 
     /* Header */
     header {
@@ -58,6 +69,8 @@ hide_streamlit_style = """
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
+st.image('data/Logo_ic.png')
+
 pages = st.tabs(['Home', 'Conteúdos Didáticos', 'Entrevistas', 'Galeria'])
 
 with pages[0]:
@@ -76,4 +89,13 @@ with pages[3]:
     from paginas.galeria import *
     galeria_page()
 
+# Rodapé customizado
+st.markdown(
+    """
+    <div class="footer">
+        <p>&copy; Este material é resultado do Curso de Formação de Agentes Patrimoniais e Ambientais edital 01/2025, realizado no âmbito do Programa de Visitação e Conservação da Ilha do Campeche.</p>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
 
