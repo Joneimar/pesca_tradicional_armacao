@@ -7,56 +7,20 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-hide_streamlit_style = """
-    <style>
-    #MainMenu {visibility: hidden;}  /* Esconde menu dos três pontinhos */
-    footer {visibility: hidden;}     /* Esconde rodapé */
+with open("styles/main.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-    /* Header */
-    header {
-        background-color: #eaab61 !important;
-        height: 3rem;  /* altura fixa */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+st.image('data/Logo_ic.png')
 
-    /* Conteúdo do header */
-    header:before {
-        content: "Repositório Multimídia";
-        font-size: 18px;
-        font-weight: bold;
-        color: white;
-        white-space: nowrap;   /* impede quebra de linha */
-        padding-left: 3rem;       /* adiciona espaço lateral */
-        display: inline-block; /* garante aplicação do padding */
-    }
-    /* Title principal */
-    h1 {
-        color: #66a088 !important;
-    }
-
-    /* Subheader */
-    h2, h3 {
-        color: #eaab61 !important;
-    }
-
-    /* Texto padrão */
-    p {
-        color: white !important;
-        font-size: 1rem; /* equivalente ao h5 */
-    }
-
-    /* Fundo */
-    .stApp {
-        background-image: url("PESCA DA TAINHA 2024/IMG_2813.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    </style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+# Rodapé
+st.markdown(
+    """
+    <div class="footer">
+        <p>&copy; Este material é resultado do Curso de Formação de Agentes Patrimoniais e Ambientais edital 01/2025, realizado no âmbito do Programa de Visitação e Conservação da Ilha do Campeche.</p>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
 
 pages = st.tabs(['Home', 'Conteúdos Didáticos', 'Entrevistas', 'Galeria'])
 
